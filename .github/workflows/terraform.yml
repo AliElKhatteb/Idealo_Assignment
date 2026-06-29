@@ -22,7 +22,7 @@ jobs:
           terraform_version: 1.6.0
 
       - name: Terraform Init
-        run: terraform init
+        run: terraform init -upgrade -reconfigure
 
       - name: Terraform Format Check
         run: terraform fmt -check
@@ -47,7 +47,7 @@ jobs:
           terraform_version: 1.6.0
 
       - name: Terraform Init
-        run: terraform init
+        run: terraform init -upgrade -reconfigure
 
       - name: Terraform Plan
         run: terraform plan -var-file="envs/dev.tfvars" -out=tfplan
@@ -84,7 +84,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Terraform Init
-        run: terraform init
+        run: terraform init -upgrade -reconfigure
 
       - name: Download Plan Artifact
         uses: actions/download-artifact@v4
