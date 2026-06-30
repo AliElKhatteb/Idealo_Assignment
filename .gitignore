@@ -6,7 +6,7 @@ crash.log
 crash.*.log
 *.tfplan
 *.plan
-
+terraform.tfstate
 # OS / IDE
 .DS_Store
 Thumbs.db
