@@ -3,16 +3,9 @@ module "uploads" {
 
   name = var.name
 
-  allowed_extensions = [
-    "pdf",
-    "png",
-    "jpg"
-  ]
+  allowed_extensions = var.allowed_extensions
 
-  required_metadata = [
-    "customer-id",
-    "document-type"
-  ]
+  required_metadata = var.required_metadata
 
   tags = {
     Project     = "Idealo-Assigment"
