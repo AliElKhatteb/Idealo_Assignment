@@ -14,12 +14,12 @@ variable "region" {
   default     = "eu-central-1"
 }
 
-variable allowed_extensions {
+variable "allowed_extensions" {
   type        = list(string)
   description = "List of allowed file extensions."
 }
 
-variable required_metadata {
+variable "required_metadata" {
   type        = list(string)
   description = "List of required metadata keys."
 }
